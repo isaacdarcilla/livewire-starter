@@ -35,81 +35,11 @@
                             </div>
                             <div class="card-body pt-3">
                                 <div class="p-2">
-                                    <form method="POST" class="form-horizontal" action="{{ route('register') }}"
-                                          enctype="multipart/form-data">
-                                        @csrf
-                                        <div class="mb-3">
-                                            <label for="useremail" class="form-label">Email</label>
-                                            <input type="email"
-                                                   class="form-control rounded-0 @error('email') is-invalid @enderror"
-                                                   id="useremail"
-                                                   value="{{ old('email') }}" name="email" placeholder="Enter email"
-                                                   autofocus required>
-                                            @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="username" class="form-label">Username</label>
-                                            <input type="text" class="form-control rounded-0 @error('name') is-invalid @enderror"
-                                                   value="{{ old('name') }}" id="username" name="name" autofocus
-                                                   required
-                                                   placeholder="Enter username">
-                                            @error('name')
-                                            <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="userpassword" class="form-label">Password</label>
-                                            <input type="password"
-                                                   class="form-control rounded-0 @error('password') is-invalid @enderror"
-                                                   id="userpassword" name="password"
-                                                   placeholder="Enter password" autofocus required>
-                                            @error('password')
-                                            <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-
-                                        <div class="mb-3">
-                                            <label for="confirmpassword" class="form-label">Confirm Password</label>
-                                            <input type="password"
-                                                   class="form-control rounded-0 @error('password_confirmation') is-invalid @enderror"
-                                                   id="confirmpassword" name="password_confirmation"
-                                                   name="password_confirmation" placeholder="Enter Confirm password"
-                                                   autofocus required>
-                                            @error('password_confirmation')
-                                            <span class="invalid-feedback" role="alert">
-                                                    <strong>{{ $message }}</strong>
-                                                </span>
-                                            @enderror
-                                        </div>
-
-                                        <div class="mt-4 d-grid">
-                                            <button class="btn btn-primary rounded-0 waves-effect waves-light"
-                                                    type="submit">Register
-                                            </button>
-                                        </div>
-
-                                        <div class="mt-4 text-center">
-                                            <p class="mb-0">By registering you agree to the <a href="#"
-                                                                                                     class="text-primary">Terms
-                                                    of Use</a></p>
-                                        </div>
-                                    </form>
+                                    <livewire:auth.register-component/>
                                 </div>
-
                             </div>
                         </div>
                         <div class="mt-5 text-center">
-
                             <div>
                                 <p>Already have an account ? <a href="{{ url('login') }}"
                                                                 class="fw-medium text-primary">
