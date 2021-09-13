@@ -1,7 +1,7 @@
 
 # Laravel Livewire Starter
 
-Livewire starter kit with authetication and user roles.
+Livewire starter kit with authentication and user roles.
 
 ## Installation
 
