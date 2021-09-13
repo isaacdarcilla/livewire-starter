@@ -8,6 +8,7 @@ Livewire starter kit with authetication and user roles.
 - git clone https://github.com/isaacdarcilla/livewire-starter
 - cd livewire-starter
 - composer install
+- npm install
 - npm run prod
 - php artisan storage:link
 - php artisan migrate
